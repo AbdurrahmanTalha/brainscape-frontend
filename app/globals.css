@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: #050505;
+    max-width: 1280px;
+}
