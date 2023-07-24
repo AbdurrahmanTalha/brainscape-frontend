@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from "/public/men.jpg";
+import img from "@/public/men.jpg";
 const page = () => {
     return (
         <section className="flex h-[608px] w-[1218px] mx-auto mt-16">

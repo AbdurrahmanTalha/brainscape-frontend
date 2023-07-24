@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    background-color: #050505 !important;
+}
+
 body {
-    background-color: #050505;
     max-width: 1280px;
+    @apply mx-auto
 }
