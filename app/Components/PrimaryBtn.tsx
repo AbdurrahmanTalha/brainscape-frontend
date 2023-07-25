@@ -13,7 +13,7 @@ const PrimaryBtn = ({ name, padding, fontWeight, width, height }: IprimaryBtn) =
     return (
         <div>
             <button
-                className="border bg-[#E34A6B] rounded-md text-white"
+                className="border border-none bg-[#E34A6B] rounded-md text-white"
                 style={{
                     padding: padding,
                     fontWeight: fontWeight,
