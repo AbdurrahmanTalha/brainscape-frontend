@@ -8,6 +8,9 @@ import img from "../../public/Rectangle.png"
 
 
 const StudentDashboardPage = () => {
+    const customStyle = {
+        "--value": "100px",
+    } as React.CSSProperties;
     return (
         <main>
             <DashboardNav />
@@ -85,7 +88,7 @@ const StudentDashboardPage = () => {
                             <Image className="w-full object-cover h-[280px]" width={100} height={100} src={img} alt="" />
                             <h2 className="text-[24px] font-semibold text-[#FFFFFF] mt-5 ml-5">Mathmatics</h2>
                             <div className="flex items-center gap-10 mt-6 mb-5 ml-8">
-                                <div className="radial-progress " style={{ "--value ": 55 }}>55%</div>
+                                <div className="radial-progress " style={customStyle}>55%</div>
                                 <div>
                                     <h2 className="text-[#FFFFFF] font-semibold md:text-[24px] text-[20px]">30 Quzzies out of 40</h2>
                                     <button className="bg-[#171320] px-8 mt-3 mb-3 py-2 text-[#FFFFFF] rounded-md">Continue lesson</button>
