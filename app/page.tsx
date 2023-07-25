@@ -1,4 +1,5 @@
 import Banner from "./Components/Banner/Banner";
+import Footer from "./Components/Footer/Footer";
 import Hero2 from "./Components/Hero2/Hero2";
 import Sponsors from "./Components/Sponsors/Sponsors";
 import Statistic from "./Components/Statistic/Statistic";
@@ -12,6 +13,7 @@ export default function Home() {
             <Hero2></Hero2>
             <Topics></Topics>
             <Sponsors></Sponsors>
+            <Footer></Footer>
         </main>
     );
 }
