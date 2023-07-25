@@ -1,7 +1,6 @@
 import React from "react";
 import DashboardNav from "../components/ui/DashboardNav";
 
-
 const StudentDashboardPage = () => {
     return (
         <main>
