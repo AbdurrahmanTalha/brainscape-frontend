@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaUpload } from "react-icons/fa";
 import img from '/public/men.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
