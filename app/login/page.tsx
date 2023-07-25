@@ -12,11 +12,11 @@ const page = () => {
                <h3 className='text-4xl font-bold text-center mb-12 text-white'>Login</h3>
                 <div className=' w-full '>
                   <p className='font-medium mb-1 text-white '>Email</p> 
-                  <input type="text" placeholder="Email" className="input rounded-md border-2 text-[#ffffffa6] text-xs font-medium border-[#9D77EE]   lg:w-[95%]  w-full" />
+                  <input type="text" placeholder="Email" className="input rounded-md border-2 text-[#ffffffa6] text-xs font-medium border-[#9D77EE]  w-full " />
                 </div>
                 <div className=' w-full mt-7'>
                   <p className='font-medium mb-1 text-white'>Password</p> 
-                  <input type="password" placeholder="Password" className="input rounded-md border-2 text-[#ffffffa6] text-xs font-medium border-[#9D77EE]  lg:w-[95%]  w-full" />
+                  <input type="password" placeholder="Password" className="input rounded-md border-2 text-[#ffffffa6] text-xs font-medium border-[#9D77EE]  w-full" />
                   <div className='flex justify-between  text-sm font-normal mt-1'>
                   <label className=' text-[#ffffffa6] cursor-pointer' >Forget Password?</label>
                   <label className='text-[#ffffffa6] cursor-pointer' >Don’t have a account?</label>
