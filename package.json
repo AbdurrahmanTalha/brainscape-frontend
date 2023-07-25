@@ -6,7 +6,15 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+        "lint:fixed": "eslint . --fix",
+        "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+        "prettier:fixed": "prettier --write .",
+        "lint_prettier:check": "yarn lint:check && yarn prettier:check"
+    },
+    "lint-staged": {
+        "src/**/*.ts": "yarn lint_prettier:check"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
