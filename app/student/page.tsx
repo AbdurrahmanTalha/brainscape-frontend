@@ -6,7 +6,6 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import CLearningTable from "../components/ui/CLearningTable";
 import img from "../../public/Rectangle.png"
 
-
 const StudentDashboardPage = () => {
     const customStyle = {
         "--value": 55,
