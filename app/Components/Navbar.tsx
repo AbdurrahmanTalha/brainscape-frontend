@@ -14,9 +14,12 @@ const Navbar = () => {
                     <SecendryBtn padding="13px 35px" fontWeight="bold" name="Login" width="120px" height="50px" />
                 </div>
             </nav> */}
-            <div className="navbar p-[35px]">
+            <div className="navbar">
                 <div className="navbar-start">
-                    <div className="dropdown">
+                    <a className="normal-case text-[24px] text-white font-bold">Brainscape</a>
+                </div>
+                <div className="navbar-end">
+                    <div className="dropdown dropdown-end dropdown-bottom">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +38,7 @@ const Navbar = () => {
                         </label>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow bg-base-100 rounded-box"
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
                         >
                             <div className="lg:flex items-center gap-7">
                                 <PrimaryBtn
@@ -55,10 +58,7 @@ const Navbar = () => {
                             </div>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-[24px] text-white">Brainscape</a>
-                </div>
-                <div className="navbar-end hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 hidden lg:flex">
                         <div className="flex items-center gap-7">
                             <PrimaryBtn
                                 padding="13px 24px"

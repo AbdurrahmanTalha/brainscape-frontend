@@ -8,5 +8,5 @@ html {
 
 body {
     max-width: 1280px;
-    @apply mx-auto;
+    @apply max-w-[1240px] mx-auto px-3;
 }
