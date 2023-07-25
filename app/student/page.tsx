@@ -1,12 +1,10 @@
 import React from "react";
-
+import DashboardNav from "../components/ui/DashboardNav";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 import img from "../../public/Rectangle.png"
-import DashboardNav from "../Components/ui/DashboardNav";
-import CLearningTable from "../Components/ui/CLearningTable";
 
 const StudentDashboardPage = () => {
     const customStyle = {
