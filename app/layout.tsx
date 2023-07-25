@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-
+import page from "./components/ui/DashboardNav"
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 
 export const metadata: Metadata = {
