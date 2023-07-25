@@ -3,6 +3,7 @@ import React from "react";
 import img from '/public/men.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
+// Test
 const page = () => {
     return (
         <section className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] w-4/5 mx-auto mt-16 lg:gap-0 gap-5">
