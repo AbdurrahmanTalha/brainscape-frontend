@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { FaUpload } from "react-icons/fa";
 import img from '/public/men.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpload } from "@fortawesome/free-solid-svg-icons";
 const page = () => {
     return (
         <section className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] w-4/5 mx-auto mt-16 lg:gap-0 gap-5">
@@ -52,7 +54,8 @@ const page = () => {
                                 <label className="custom-file-input-label">
                                     <input type="file" className=" hidden"  />
                                     <div className="flex justify-start gap-2 items-center px-4 py-2 cursor-pointer input rounded-md border-2 border-[#9D77EE] text-xs font-medium">
-                                      <FaUpload className="text-white w-5 h-5"/>
+                                      
+                                      <FontAwesomeIcon  className="text-white w-5 h-5" icon={faUpload} />
                                       Upload Profile
                                       </div>
                                 </label>
