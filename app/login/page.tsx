@@ -16,7 +16,7 @@ const page = () => {
                 </div>
                 <div className=' w-full mt-7'>
                   <p className='font-medium mb-1 text-white'>Password</p> 
-                  <input type="text" placeholder="Password" className="input rounded-md border-2 text-[#ffffffa6] text-xs font-medium border-[#9D77EE]  w-full" />
+                  <input type="password" placeholder="Password" className="input rounded-md border-2 text-[#ffffffa6] text-xs font-medium border-[#9D77EE]  w-full" />
                   <div className='flex justify-between lg:text-lg text-sm font-normal mt-1'>
                   <label className=' text-[#ffffffa6] cursor-pointer' >Forget Password?</label>
                   <label className='text-[#ffffffa6] cursor-pointer' >Don’t have a account?</label>

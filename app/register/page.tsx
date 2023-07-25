@@ -60,7 +60,7 @@ const page = () => {
                             <div className=" w-full mt-7">
                                 <p className="font-medium mb-1 text-white">Password</p>
                                 <input
-                                    type="text"
+                                    type="password"
                                     placeholder="Password"
                                     className="input rounded-md border-2 border-[#9D77EE]  w-full text-xs font-medium"
                                 />
