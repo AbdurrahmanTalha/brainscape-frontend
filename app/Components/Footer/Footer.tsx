@@ -22,21 +22,20 @@ const Footer = () => {
                     <div className="mr-[228px] pt-[58px]">
                         <h1>Category</h1>
                         <ul className="pt-[19px]">
-                        <li>Link</li>
+                            <li>Link</li>
                             <li className="py-2">Link</li>
                             <li>Link</li>
                             <li className="py-2">Link</li>
                         </ul>
                     </div>
                 </div>
-             
             </div>
             <div className="text-white px-[100px] lg:flex text-left justify-around mt-[64px] items-center">
-                    <p>Privacy Policy</p>
-                    <p  className="py-2">Privacy Policy</p>
-                    <p>Privacy Policy</p>
-                    <p className="py-2">Privacy Policy</p>
-                </div>
+                <p>Privacy Policy</p>
+                <p className="py-2">Privacy Policy</p>
+                <p>Privacy Policy</p>
+                <p className="py-2">Privacy Policy</p>
+            </div>
         </>
     );
 };
