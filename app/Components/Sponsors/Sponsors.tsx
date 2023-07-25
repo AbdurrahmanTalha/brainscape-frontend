@@ -2,7 +2,7 @@ import React from "react";
 
 const Sponsors = () => {
     return (
-        <div className="border bg-[#171320] p-5 border-none mt-[90px]">
+        <div className="border bg-[#171320] h-[400px] round border-none mt-[90px]">
             <h1 className="text-center text-[40px] font-bold text-white pt-[30px]">JOIN 10 MILLION PEOPLE</h1>
             <div className="lg:flex justify-center items-center gap-[60px] mt-[20px]">
                 <div className="flex justify-center items-center">
