@@ -12,7 +12,7 @@ const page = () => {
             <div className="lg:w-1/2 flex lg:flex-row flex-col justify-center items-center  bg-[#171320]">
                 <div className="w-4/5 mx-auto py-10">
                     <h3 className="text-4xl font-bold text-center mb-12 text-white">Register</h3>
-                    <div className="flex lg:flex-row flex-col justify-between">
+                    <div className="flex lg:flex-row flex-col justify-between gap-7">
                         <div className="w-full">
                             <div className=" w-full mb-7">
                                 <p className="font-medium mb-1 text-white ">First Name</p>
