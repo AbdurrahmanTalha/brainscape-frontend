@@ -12,7 +12,7 @@ const StudentDashboardPage = () => {
         <main>
             <DashboardNav />
             <section className="my-20">
-                <div className="grid md:w-[1240px] gap-5 md:h-[176px] md:grid-cols-2">
+                <div className="grid md:w-full gap-5 md:h-[176px] md:grid-cols-2">
 
                     <div className="flex md:w-[558px] md:h-[160px] items-center gap-8  ">
                         <Image className="md:w-[160px] rounded-full object-cover md:h-[160px]" width={100} height={100} src="https://i.ibb.co/vsC46pf/bw.jpg" alt="" />
@@ -21,7 +21,7 @@ const StudentDashboardPage = () => {
                             <p className="font-medium text-[#FFFFFF]">Solve - amount of problems to continue streak!</p>
                         </div>
                     </div>
-                    <div className="border md:w-[600px] md:h-[160px] border-[#171320] p-4">
+                    <div className="border md:w-full md:h-[160px] border-[#171320] p-4">
                         <p className="text-[#FFFFFF] mt-[15px] mb-[20px] ml-[30px] font-bold ">123 Day Win Streak!</p>
                         <div className="grid items-center grid-cols-7 ml-[30px] ">
                             <div>
@@ -77,18 +77,18 @@ const StudentDashboardPage = () => {
 
             {/* Pick up where you left of! */}
 
-            <section className="">
+            <section>
                 <div className="grid gap-5 md:grid-cols-2">
                     <div>
                         <h2 className="my-3 text-[24px] font-semibold text-[#FFFFFF]">Pick up where you left of!</h2>
-                        <div className="border rounded-md md:h-[509px] border-[#9D77EE] md:w-[600px]">
+                        <div className="border rounded-md md:h-[509px] border-[#9D77EE] md:w-full">
                             <Image className="w-full object-cover h-[280px]" width={100} height={100} src={img} alt="" />
                             <h2 className="text-[24px] font-semibold text-[#FFFFFF] mt-5 ml-5">Mathmatics</h2>
-                            <div className="flex items-center gap-10 mt-6 ml-8">
+                            <div className="flex items-center gap-10 mt-6 mb-5 ml-8">
                                 <div className="radial-progress " style={{ "--value ": 55 }}>55%</div>
                                 <div>
-                                    <h2 className="text-[#FFFFFF] font-semibold text-[24px]">30 Quzzies out of 40</h2>
-                                    <button className="bg-[#171320] px-8 mt-3 py-2 text-[#FFFFFF] rounded-md">Continue lesson</button>
+                                    <h2 className="text-[#FFFFFF] font-semibold md:text-[24px] text-[20px]">30 Quzzies out of 40</h2>
+                                    <button className="bg-[#171320] px-8 mt-3 mb-3 py-2 text-[#FFFFFF] rounded-md">Continue lesson</button>
                                 </div>
 
                             </div>
@@ -96,7 +96,7 @@ const StudentDashboardPage = () => {
                     </div>
                     <div className="mr-0" >
                         <h2 className="my-3 text-[24px] font-semibold text-[#FFFFFF]">Continue Learning</h2>
-                        <div className="border mr-0 rounded-md md:h-[509px] border-[#9D77EE] md:w-[600px]">
+                        <div className="border mr-0 rounded-md md:h-[509px] border-[#9D77EE] md:w-full">
                             <CLearningTable />
                         </div>
                     </div>
