@@ -11,7 +11,7 @@ const DashboardNav = () => {
 
     return (
         <nav className="">
-            <div className="container flex items-center justify-between py-3">
+            <div className="flex items-center justify-between py-3 ">
                 <span className="flex items-center gap-2 md:hidden">
                     {toggle ? (
                         <FontAwesomeIcon onClick={() => setToggle(!toggle)} icon={faCircleXmark} />
