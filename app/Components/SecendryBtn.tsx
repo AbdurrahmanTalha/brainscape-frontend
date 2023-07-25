@@ -1,17 +1,21 @@
-import React from 'react';
-interface IprimaryBtn  {name : string, padding : string, fontWeight : string, width : string, height : string}
-const SecendryBtn = ({ name, padding, fontWeight, width, height } : IprimaryBtn) => {
-   
+import React from "react";
+interface IprimaryBtn {
+    name: string;
+    padding: string;
+    fontWeight: string;
+    width: string;
+    height: string;
+}
+const SecendryBtn = ({ name, padding, fontWeight, width, height }: IprimaryBtn) => {
     return (
         <div>
             <button
-                className='border bg-[#171320] rounded-md text-white'
+                className="border bg-[#171320] rounded-md text-white"
                 style={{
-                    padding: padding ,
+                    padding: padding,
                     fontWeight: fontWeight,
-                    width : width,
-                    height : height
-
+                    width: width,
+                    height: height,
                 }}
             >
                 {name}
