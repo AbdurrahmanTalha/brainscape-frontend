@@ -9,7 +9,7 @@ import img from "../../public/Rectangle.png"
 
 const StudentDashboardPage = () => {
     const customStyle = {
-        "--value": "100px",
+        "--value": 55,
     } as React.CSSProperties;
     return (
         <main>
