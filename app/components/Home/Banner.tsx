@@ -5,9 +5,14 @@ import SecondaryBtn from "../ui/SecondaryBtn";
 const Banner = () => {
     return (
         <>
-            <div className="lg:flex flex-row-reverse justify-between mt-[90px] items-center  mx-10">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="650" height="520" viewBox="0 0 651 523" fill="none">
+            <div className="lg:flex flex-row-reverse justify-between mt-[90px] items-center mx-10">
+                <div style={{ width: "100%", maxWidth: "650px" }}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 651 523"
+                        fill="none"
+                        style={{ width: "100%", height: "auto" }}
+                    >
                         <path d="M0 0H651V523H0V0Z" fill="#E5E5E5" />
                         <path d="M0.5 0.5H650.5V522.5H0.5V0.5Z" stroke="black" strokeOpacity="0.3" />
                     </svg>
