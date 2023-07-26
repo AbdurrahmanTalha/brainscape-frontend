@@ -1,5 +1,3 @@
-
-
 const LearningTable = () => {
     return (
         <div className="overflow-x-auto">

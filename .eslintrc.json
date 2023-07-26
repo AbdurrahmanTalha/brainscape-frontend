@@ -18,6 +18,5 @@
                 "extensions": [".ts", ".tsx"]
             }
         ]
-        // "react/props-types" : "off",
     }
 }

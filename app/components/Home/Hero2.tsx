@@ -44,7 +44,6 @@ const Hero2 = () => {
                         Lorem ipsum dolor sit amet. Id dolor totam aut aperiam cumque sit officia perspiciatis. Hic quis
                         exercitationem aut officia voluptas
                     </p>
-                  
                 </div>
             </div>
         </>
