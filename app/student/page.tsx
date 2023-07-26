@@ -1,11 +1,10 @@
 import React from "react";
-import DashboardNav from "../components/ui/DashboardNav";
+import DashboardNav from "../components/Layout/DashboardNav";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import CLearningTable from "../components/ui/CLearningTable";
-import img from "../../public/Rectangle.png"
-
+import img from "@/public/Rectangle.png";
+import LearningTable from "../components/ui/LearningTable";
 
 const StudentDashboardPage = () => {
     const customStyle = {
@@ -16,9 +15,14 @@ const StudentDashboardPage = () => {
             <DashboardNav />
             <section className="my-20">
                 <div className="grid md:w-full gap-5 md:h-[176px] md:grid-cols-2">
-
                     <div className="flex md:w-[558px] md:h-[160px] items-center gap-8  ">
-                        <Image className="md:w-[160px] rounded-full object-cover md:h-[160px]" width={100} height={100} src="https://i.ibb.co/vsC46pf/bw.jpg" alt="" />
+                        <Image
+                            className="md:w-[160px] rounded-full object-cover md:h-[160px]"
+                            width={100}
+                            height={100}
+                            src="https://i.ibb.co/vsC46pf/bw.jpg"
+                            alt=""
+                        />
                         <div>
                             <h2 className="text-[24px]  text-[#FFFFFF] font-bold">John Doe</h2>
                             <p className="font-medium md:max-w-[200px] lg:max-w-[500px] text-[#FFFFFF]">Solve - amount of problems to continue streak!</p>
@@ -28,26 +32,32 @@ const StudentDashboardPage = () => {
                         <p className="text-[#FFFFFF] mt-[15px] mb-[20px] ml-[30px] font-bold ">123 Day Win Streak!</p>
                         <div className="grid items-center grid-cols-7 ml-[30px] ">
                             <div>
-                                <FontAwesomeIcon className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3" icon={faCheck} />
+                                <FontAwesomeIcon
+                                    className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3"
+                                    icon={faCheck}
+                                />
                             </div>
                             <div>
-                                <FontAwesomeIcon className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3" icon={faCheck} />
+                                <FontAwesomeIcon
+                                    className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3"
+                                    icon={faCheck}
+                                />
                             </div>
                             <div>
-                                <FontAwesomeIcon className="border border-[#171320] text-[#FFFFFF]  rounded-full p-1 mt-3" icon={faCheck} />
+                                <FontAwesomeIcon
+                                    className="border border-[#171320] text-[#FFFFFF]  rounded-full p-1 mt-3"
+                                    icon={faCheck}
+                                />
                             </div>
                             <div>
-                                <FontAwesomeIcon className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3" icon={faCheck} />
+                                <FontAwesomeIcon
+                                    className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3"
+                                    icon={faCheck}
+                                />
                             </div>
-                            <div className="border border-[#171320] w-6 h-6 rounded-full p-1 mt-3">
-
-                            </div>
-                            <div className="border border-[#171320] w-6 h-6 rounded-full p-1 mt-3">
-
-                            </div>
-                            <div className="border border-[#171320] w-6 h-6 rounded-full p-1 mt-3">
-
-                            </div>
+                            <div className="border border-[#171320] w-6 h-6 rounded-full p-1 mt-3"></div>
+                            <div className="border border-[#171320] w-6 h-6 rounded-full p-1 mt-3"></div>
+                            <div className="border border-[#171320] w-6 h-6 rounded-full p-1 mt-3"></div>
                         </div>
                         <div className="grid items-center grid-cols-7 ml-[30px] text-[#FFFFFF] px-1">
                             <div>
@@ -76,7 +86,7 @@ const StudentDashboardPage = () => {
                 </div>
             </section>
 
-            <hr className='border-1 border-[#FFFFFF] max-w-[1240px] mx-auto py-5' />
+            <hr className="border-1 border-[#FFFFFF] max-w-[1240px] mx-auto py-5" />
 
             {/* Pick up where you left of! */}
 
@@ -85,22 +95,33 @@ const StudentDashboardPage = () => {
                     <div>
                         <h2 className="my-3 text-[24px] font-semibold text-[#FFFFFF]">Pick up where you left of!</h2>
                         <div className="border rounded-md md:h-[509px] border-[#9D77EE] md:w-full">
-                            <Image className="w-full object-cover h-[280px]" width={100} height={100} src={img} alt="" />
+                            <Image
+                                className="w-full object-cover h-[280px]"
+                                width={100}
+                                height={100}
+                                src={img}
+                                alt=""
+                            />
                             <h2 className="text-[24px] font-semibold text-[#FFFFFF] mt-5 ml-5">Mathmatics</h2>
                             <div className="flex items-center gap-10 mt-6 mb-5 ml-8">
-                                <div className="radial-progress " style={customStyle}>55%</div>
-                                <div>
-                                    <h2 className="text-[#FFFFFF] font-semibold md:text-[24px] text-[20px]">30 Quzzies out of 40</h2>
-                                    <button className="bg-[#171320] px-8 mt-3 mb-3 py-2 text-[#FFFFFF] rounded-md">Continue lesson</button>
+                                <div className="radial-progress " style={customStyle}>
+                                    55%
                                 </div>
-
+                                <div>
+                                    <h2 className="text-[#FFFFFF] font-semibold md:text-[24px] text-[20px]">
+                                        30 Quzzes out of 40
+                                    </h2>
+                                    <button className="bg-[#171320] px-8 mt-3 mb-3 py-2 text-[#FFFFFF] rounded-md">
+                                        Continue lesson
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="mr-0" >
+                    <div className="mr-0">
                         <h2 className="my-3 text-[24px] font-semibold text-[#FFFFFF]">Continue Learning</h2>
                         <div className="border mr-0 rounded-md md:h-[509px] border-[#9D77EE] md:w-full">
-                            <CLearningTable />
+                            <LearningTable />
                         </div>
                     </div>
                 </div>

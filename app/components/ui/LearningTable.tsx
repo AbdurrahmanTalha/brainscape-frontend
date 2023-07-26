@@ -1,6 +1,4 @@
-
-
-const CLearningTable = () => {
+const LearningTable = () => {
     return (
         <div className="overflow-x-auto">
             <table className="table text-center">
@@ -27,4 +25,4 @@ const CLearningTable = () => {
     );
 };
 
-export default CLearningTable;
+export default LearningTable;
