@@ -1,12 +1,14 @@
 import React from "react";
-interface IprimaryBtn {
+
+interface IPrimaryBtn {
     name: string;
     padding: string;
     fontWeight: string;
     width: string;
     height: string;
 }
-const SecendryBtn = ({ name, padding, fontWeight, width, height }: IprimaryBtn) => {
+
+const SecondaryBtn = ({ name, padding, fontWeight, width, height }: IPrimaryBtn) => {
     return (
         <div>
             <button
@@ -24,4 +26,4 @@ const SecendryBtn = ({ name, padding, fontWeight, width, height }: IprimaryBtn) 
     );
 };
 
-export default SecendryBtn;
+export default SecondaryBtn;

@@ -1,15 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-interface IprimaryBtn {
+interface IPrimaryBtn {
     name: string;
     padding: string;
     fontWeight: string;
     width: string;
     height: string;
 }
-const PrimaryBtn = ({ name, padding, fontWeight, width, height }: IprimaryBtn) => {
-    // Define default values for padding and font weight
-
+const PrimaryBtn = ({ name, padding, fontWeight, width, height }: IPrimaryBtn) => {
     return (
         <div>
             <button

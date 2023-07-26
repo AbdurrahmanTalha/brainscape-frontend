@@ -1,10 +1,9 @@
-
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import img from "@/public/logic-HzWHci.png";
 import Image from "next/image";
-import DashboardNav from "@/app/Components/ui/DashboardNav";
+import DashboardNav from "@/app/components/Layout/DashboardNav";
 
 export default function AllCourses() {
     return (

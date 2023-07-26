@@ -1,9 +1,9 @@
-import Banner from "./Components/Banner/Banner";
-import Footer from "./Components/Footer/Footer";
-import Hero2 from "./Components/Hero2/Hero2";
-import Sponsors from "./Components/Sponsors/Sponsors";
-import Statistic from "./Components/Statistic/Statistic";
-import Topics from "./Components/Topics/Topics";
+import Banner from "./components/Home/Banner";
+import Footer from "./components/Home/Footer";
+import Hero2 from "./components/Home/Hero2";
+import Sponsors from "./components/Home/Sponsors";
+import Statistic from "./components/Home/Statistic";
+import Topics from "./components/Home/Topics";
 
 export default function Home() {
     return (
