@@ -20,8 +20,8 @@ const StudentDashboardPage = () => {
                     <div className="flex md:w-[558px] md:h-[160px] items-center gap-8  ">
                         <Image className="md:w-[160px] rounded-full object-cover md:h-[160px]" width={100} height={100} src="https://i.ibb.co/vsC46pf/bw.jpg" alt="" />
                         <div>
-                            <h2 className="text-[24px] text-[#FFFFFF] font-bold">John Doe</h2>
-                            <p className="font-medium text-[#FFFFFF]">Solve - amount of problems to continue streak!</p>
+                            <h2 className="text-[24px]  text-[#FFFFFF] font-bold">John Doe</h2>
+                            <p className="font-medium md:max-w-[200px] lg:max-w-[500px] text-[#FFFFFF]">Solve - amount of problems to continue streak!</p>
                         </div>
                     </div>
                     <div className="border md:w-full md:h-[160px] border-[#171320] p-4">
@@ -110,18 +110,18 @@ const StudentDashboardPage = () => {
 
             <section className="mt-10 ">
                 <h2 className="mb-3 text-[24px] font-semibold text-[#FFFFFF]">Recommended Courses</h2>
-                <div className="grid gap-5 mb-5 md:grid-cols-3">
-                    <div className=" hover:scale-95 transform duration-500 p-10 md:w-[410px] rounded-md md:h-[380px] border border-[#9D77EE] ">
+                <div className="grid gap-5 mb-5 md:grid-cols-2 lg:grid-cols-3 ">
+                    <div className=" hover:scale-95 transform duration-500 p-10  max-w-[410px] w-auto rounded-md lg:h-[380px] border border-[#9D77EE] ">
                         <Image className="block object-cover w-40 h-40 mx-auto rounded-full " src="https://i.ibb.co/vsC46pf/bw.jpg" alt="" width={100} height={100} />
                         <p className="text-[#FFFFFF] mt-10 mb-3">30 Quzzes - Something</p>
                         <p className="text-[24px] font-bold text-[#FFFFFF]">Logic</p>
                     </div>
-                    <div className=" hover:scale-95 transform duration-500 p-10 md:w-[410px] rounded-md md:h-[380px] border border-[#9D77EE] ">
+                    <div className=" hover:scale-95 transform duration-500 p-10  max-w-[410px] w-auto rounded-md lg:h-[380px] border border-[#9D77EE] ">
                         <Image className="block object-cover w-40 h-40 mx-auto rounded-full h" src="https://i.ibb.co/vsC46pf/bw.jpg" alt="" width={100} height={100} />
                         <p className="text-[#FFFFFF] mt-10 mb-3">30 Quzzes - Something</p>
                         <p className="text-[24px] font-bold text-[#FFFFFF]">Logic</p>
                     </div>
-                    <div className=" hover:scale-95 transform duration-500 p-10 md:w-[410px] rounded-md md:h-[380px] border border-[#9D77EE] ">
+                    <div className=" hover:scale-95 transform duration-500 p-10  max-w-[410px] w-auto rounded-md lg:h-[380px] border border-[#9D77EE]  ">
                         <Image className="block object-cover w-40 h-40 mx-auto rounded-full h" src="https://i.ibb.co/vsC46pf/bw.jpg" alt="" width={100} height={100} />
                         <p className="text-[#FFFFFF] mt-10 mb-3">30 Quzzes - Something</p>
                         <p className="text-[24px] font-bold text-[#FFFFFF]">Logic</p>
