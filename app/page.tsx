@@ -5,13 +5,10 @@ import Sponsors from "./components/Home/Sponsors";
 import Statistic from "./components/Home/Statistic";
 import Topics from "./components/Home/Topics";
 
-
-//      asdasd asdas
-asdasd asdas dasd
 export default function Home() {
     return (
         <main>
-            {/* <Banner></Banner> */}
+            <Banner></Banner>
             <Statistic></Statistic>
             <Hero2></Hero2>
             <Topics></Topics>
