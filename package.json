@@ -45,6 +45,6 @@
         "prettier": "^3.0.0"
     },
     "lint-staged": {
-        "src/**/*.tsx": "yarn lint_prettier:check"
+        "app/**/*.tsx": "yarn lint_prettier:check"
     }
 }
