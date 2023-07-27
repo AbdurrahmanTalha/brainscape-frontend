@@ -5,6 +5,8 @@ import Sponsors from "./components/Home/Sponsors";
 import Statistic from "./components/Home/Statistic";
 import Topics from "./components/Home/Topics";
 
+
+//      asdasd asdas
 export default function Home() {
     return (
         <main>
