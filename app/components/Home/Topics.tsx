@@ -2,7 +2,7 @@ import React from "react";
 
 const Topics = () => {
     return (
-        <>
+        <div className="container">
             <h1 className="text-center text-[40px] font-bold mt-[60px] text-white">
                 Master concepts in 15 minutes a day
             </h1>
@@ -32,7 +32,7 @@ const Topics = () => {
                     </svg>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

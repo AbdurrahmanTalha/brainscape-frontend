@@ -5,7 +5,7 @@ import SecondaryBtn from "../ui/SecondaryBtn";
 const Banner = () => {
     return (
         <>
-            <div className="lg:flex flex-row-reverse justify-between mt-[90px] items-center mx-10">
+            <div className="lg:flex flex-row-reverse justify-between mt-[90px] items-center mx-10 container">
                 <div style={{ width: "100%", maxWidth: "650px" }}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
