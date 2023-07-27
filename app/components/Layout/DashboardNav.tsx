@@ -10,7 +10,7 @@ const DashboardNav = () => {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <nav className="container">
+        <nav className="">
             <div className="flex items-center justify-between py-3 ">
                 <span className="flex items-center gap-2 md:hidden">
                     {toggle ? (

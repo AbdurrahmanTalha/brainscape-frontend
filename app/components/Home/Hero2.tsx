@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero2 = () => {
     return (
-        <div className="container">
+        <>
             <h1 className="text-center text-white font-bold text-[40px] mt-[63px]">
                 Master concepts in 15 minutes a day
             </h1>
@@ -56,7 +56,7 @@ const Hero2 = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

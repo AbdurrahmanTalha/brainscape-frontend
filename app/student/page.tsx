@@ -13,7 +13,7 @@ const StudentDashboardPage = () => {
     return (
         <main>
             <DashboardNav />
-            <section className="my-20 container">
+            <section className="my-20">
                 <div className="grid md:w-full gap-5 md:h-[176px] md:grid-cols-2">
                     <div className="flex md:w-[558px] md:h-[160px] items-center gap-8  ">
                         <Image

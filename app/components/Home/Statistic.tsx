@@ -2,7 +2,7 @@ import React from "react";
 
 const Statistic = () => {
     return (
-        <div className="border mx-auto w-[90%] rounded-[15px] p-16 bg-[#171320] border-none lg:flex justify-center items-center gap-[13.5%] mt-[59px] container">
+        <div className="border mx-auto w-[90%] rounded-[15px] p-16 bg-[#171320] border-none lg:flex justify-center items-center gap-[13.5%] mt-[59px]">
             <div className="flex justify-center items-center flex-col">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
