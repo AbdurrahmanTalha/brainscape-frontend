@@ -8,7 +8,7 @@ import Topics from "./components/Home/Topics";
 export default function Home() {
     return (
         <main>
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
             <Statistic></Statistic>
             <Hero2></Hero2>
             <Topics></Topics>
