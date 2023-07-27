@@ -6,7 +6,7 @@ import { faUpload } from "@fortawesome/free-solid-svg-icons";
 // Test
 const page = () => {
     return (
-        <section className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] w-4/5 mx-auto mt-16 lg:gap-0 gap-5">
+        <div className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] w-4/5 mx-auto mt-16 lg:gap-0 gap-5">
             <div className="lg:w-1/2">
                 <Image src={img} width={800} height={1600} alt="talha" />
             </div>
@@ -76,7 +76,7 @@ const page = () => {
                     </button>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
