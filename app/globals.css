@@ -8,7 +8,11 @@ html {
 
 body {
     max-width: 1280px;
-    @apply max-w-[1440px] mx-auto px-3;
+    @apply max-w-[1440px] mx-auto;
+}
+
+.container {
+    @apply px-3;
 }
 
 p {

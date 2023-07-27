@@ -3,7 +3,7 @@ import React from "react";
 import img from "@/public/men.jpg";
 const page = () => {
     return (
-        <section className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] mx-auto mt-16">
+        <section className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] mx-auto mt-16 container">
             <div className="lg:w-1/2">
                 <Image src={img} width={800} height={1600} alt="talha" />
             </div>
