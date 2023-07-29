@@ -76,7 +76,7 @@ const page = () => {
                     </button>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
