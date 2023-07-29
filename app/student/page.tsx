@@ -1,5 +1,4 @@
 import React from "react";
-import DashboardNav from "../components/Layout/DashboardNav";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +11,6 @@ const StudentDashboardPage = () => {
     } as React.CSSProperties;
     return (
         <main>
-            <DashboardNav />
             <section className="my-20 container">
                 <div className="grid md:w-full gap-5 md:h-[176px] md:grid-cols-2">
                     <div className="flex md:w-[558px] md:h-[160px] items-center gap-8  ">
