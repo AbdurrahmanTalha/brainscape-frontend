@@ -16,7 +16,9 @@ const LearningTable = () => {
                         <th>1.</th>
                         <td>Cy Ganderton</td>
                         <td>
-                            <button className="bg-[#171320] text-[#FFFFFF] px-5 py-1 rounded-md">Continue lesson</button>
+                            <button className="bg-[#171320] text-[#FFFFFF] px-5 py-1 rounded-md">
+                                Continue lesson
+                            </button>
                         </td>
                     </tr>
                 </tbody>

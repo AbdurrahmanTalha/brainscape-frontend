@@ -8,9 +8,13 @@ html {
 
 body {
     max-width: 1280px;
-    @apply max-w-[1920px] mx-auto px-3;
+    @apply max-w-[1440px];
 }
 
 p {
-    color: #FFFFFF65;
+    color: #ffffff65;
+}
+
+.container {
+    @apply px-3 mx-auto;
 }

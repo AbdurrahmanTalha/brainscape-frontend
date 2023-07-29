@@ -9,7 +9,7 @@ export default function AllCourses() {
     return (
         <div>
             <DashboardNav />
-            <div className="mt-[50px]">
+            <div className="mt-[50px] container">
                 <div className="w-[70%] h-[60px] mx-auto border-2 border-[#9D77EE] rounded-full flex items-center pl-[30px]">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="text-[20px] text-[#9D77EE]"></FontAwesomeIcon>
                     <input
