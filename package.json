@@ -7,12 +7,12 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "prepare": "husky install",
         "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx .",
         "lint:fixed": "eslint . --fix",
         "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx)\"",
         "prettier:fixed": "prettier --write .",
-        "lint_prettier:check": "yarn lint:check && yarn prettier:check"
+        "lint_prettier:check": "yarn lint:check && yarn prettier:check",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -43,5 +43,8 @@
         "husky": "^8.0.3",
         "lint-staged": "^13.2.3",
         "prettier": "^3.0.0"
+    },
+    "lint-staged": {
+        "app/**/*.tsx": "yarn lint_prettier:check"
     }
 }

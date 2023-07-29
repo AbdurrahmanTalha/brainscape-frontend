@@ -5,7 +5,7 @@ import SecondaryBtn from "../ui/SecondaryBtn";
 const Navbar = () => {
     return (
         <>
-            <div className="navbar">
+            <div className="navbar container">
                 <div className="navbar-start">
                     <a className="normal-case text-[24px] text-white font-bold">Brainscape</a>
                 </div>
