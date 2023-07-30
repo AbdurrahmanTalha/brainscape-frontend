@@ -111,8 +111,8 @@ const page = () => {
                     </div>
                 )}
                 <div className="mt-14 flex flex-wrap items-center lg:gap-10 gap-5">
-                    <PrimaryBtn name="DELETE ACCOUNT" padding="" fontWeight="700px" width="233px" height="50px" />
-                    <SecondaryBtn name="LOGOUT" padding="" fontWeight="700px" width="155px" height="50px" />
+                    <PrimaryBtn name="DELETE ACCOUNT" padding="" fontWeight="bold" width="200px" height="50px" />
+                    <SecondaryBtn name="LOGOUT" padding="" fontWeight="bold" width="155px" height="50px" />
                 </div>
             </div>
         </div>
