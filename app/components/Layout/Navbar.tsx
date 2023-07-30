@@ -1,12 +1,17 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import SecondaryBtn from "../ui/SecondaryBtn";
 import DashboardNav from "./DashboardNav";
 import Link from "next/link";
 
 const Navbar = () => {
-    const token = localStorage.getItem("token");
+    const [token, setToken] = useState<string | null>(null);
+
+    useEffect(() => {
+        const storedToken = window.localStorage.getItem("token");
+        setToken(storedToken);
+    }, []);
     return (
         <>
             {token ? (
