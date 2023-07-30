@@ -1,5 +1,5 @@
 import React from "react";
-import PrimaryBtn from "../components/ui/PrimaryBtn";
+import PrimaryBtn from "../../components/ui/PrimaryBtn";
 
 const page = () => {
     // Add some CSS styles to the page to ensure the SVG fills the entire viewport
