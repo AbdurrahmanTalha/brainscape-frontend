@@ -1,7 +1,6 @@
-import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-// import Navbar from "./components/Layout/Navbar";
+import Navbar from "../components/Layout/Navbar";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 
@@ -13,7 +12,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={poppins.className}>{children}</body>
+            <body className={poppins.className}>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }

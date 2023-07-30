@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import img from "@/public/Rectangle.png";
-import LearningTable from "../components/Dashboard/LearningTable";
+import LearningTable from "../../components/Dashboard/LearningTable";
 // tests
 const StudentDashboardPage = () => {
     const customStyle = {

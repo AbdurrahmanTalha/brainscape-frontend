@@ -3,12 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import img from "@/public/logic-HzWHci.png";
 import Image from "next/image";
-import DashboardNav from "@/app/components/Layout/DashboardNav";
 
 export default function AllCourses() {
     return (
         <div>
-            <DashboardNav />
             <div className="mt-[50px] container">
                 <div className="w-[70%] h-[60px] mx-auto border-2 border-[#9D77EE] rounded-full flex items-center pl-[30px]">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="text-[20px] text-[#9D77EE]"></FontAwesomeIcon>
