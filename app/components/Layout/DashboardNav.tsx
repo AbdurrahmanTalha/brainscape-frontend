@@ -19,13 +19,13 @@ const DashboardNav = () => {
                         <FontAwesomeIcon onClick={() => setToggle(!toggle)} icon={faBars} />
                     )}
                     <div className="flex items-center gap-2">
-                        <Link href="/">
+                        <Link href="/student">
                             <h2 className="text-[24px] text-[#fafafa] font-bold ">Brainscape</h2>
                         </Link>
                     </div>
                 </span>
                 <div className="items-center hidden gap-2 lg:md:flex">
-                    <Link href="/">
+                    <Link href="/student">
                         <h2 className="text-2xl font-bold text-[#fafafa]">Brainscape</h2>
                     </Link>
                 </div>
@@ -39,19 +39,18 @@ const DashboardNav = () => {
                         <Link href="/">Home</Link>
                     </li>
                     <li className="">
-                        <Link href="/blog">Blog</Link>
-                    </li>
-                    <li className="">
-                        <Link href="/all-course">Courses</Link>
+                        <Link href="/student/all-courses">Courses</Link>
                     </li>
                 </ul>
-                <Image
-                    className="object-cover w-12 h-12 rounded-full"
-                    width={100}
-                    height={100}
-                    src="https://i.ibb.co/vsC46pf/bw.jpg"
-                    alt=""
-                />
+                <Link href="/my-profile">
+                    <Image
+                        className="object-cover w-12 h-12 rounded-full"
+                        width={100}
+                        height={100}
+                        src="https://i.ibb.co/vsC46pf/bw.jpg"
+                        alt=""
+                    />
+                </Link>
             </div>
         </nav>
     );

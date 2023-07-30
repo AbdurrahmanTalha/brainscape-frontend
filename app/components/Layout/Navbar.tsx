@@ -1,11 +1,17 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import SecondaryBtn from "../ui/SecondaryBtn";
 import DashboardNav from "./DashboardNav";
+import Link from "next/link";
 
 const Navbar = () => {
-    const token = localStorage.getItem("token");
+    const [token, setToken] = useState<string | null>(null);
+
+    useEffect(() => {
+        const storedToken = window.localStorage.getItem("token");
+        setToken(storedToken);
+    }, []);
     return (
         <>
             {token ? (
@@ -13,7 +19,9 @@ const Navbar = () => {
             ) : (
                 <div className="navbar container">
                     <div className="navbar-start">
-                        <a className="normal-case text-[24px] text-white font-bold">Brainscape</a>
+                        <Link href="/" className="normal-case text-[24px] text-white font-bold">
+                            Brainscape
+                        </Link>
                     </div>
                     <div className="navbar-end">
                         <div className="dropdown dropdown-end dropdown-bottom">
@@ -38,6 +46,30 @@ const Navbar = () => {
                                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
                             >
                                 <div className="lg:flex items-center gap-7">
+                                    <Link href="/register">
+                                        <PrimaryBtn
+                                            padding="13px 24px"
+                                            fontWeight="bold"
+                                            name="Register"
+                                            width="120px"
+                                            height="50px"
+                                        />
+                                    </Link>
+                                    <Link href="/login">
+                                        <SecondaryBtn
+                                            padding="13px 35px"
+                                            fontWeight="bold"
+                                            name="Login"
+                                            width="120px"
+                                            height="50px"
+                                        />
+                                    </Link>
+                                </div>
+                            </ul>
+                        </div>
+                        <ul className="menu menu-horizontal px-1 hidden lg:flex">
+                            <div className="flex items-center gap-7">
+                                <Link href="/register">
                                     <PrimaryBtn
                                         padding="13px 24px"
                                         fontWeight="bold"
@@ -45,6 +77,8 @@ const Navbar = () => {
                                         width="120px"
                                         height="50px"
                                     />
+                                </Link>
+                                <Link href="/login">
                                     <SecondaryBtn
                                         padding="13px 35px"
                                         fontWeight="bold"
@@ -52,25 +86,7 @@ const Navbar = () => {
                                         width="120px"
                                         height="50px"
                                     />
-                                </div>
-                            </ul>
-                        </div>
-                        <ul className="menu menu-horizontal px-1 hidden lg:flex">
-                            <div className="flex items-center gap-7">
-                                <PrimaryBtn
-                                    padding="13px 24px"
-                                    fontWeight="bold"
-                                    name="Register"
-                                    width="120px"
-                                    height="50px"
-                                />
-                                <SecondaryBtn
-                                    padding="13px 35px"
-                                    fontWeight="bold"
-                                    name="Login"
-                                    width="120px"
-                                    height="50px"
-                                />
+                                </Link>
                             </div>
                         </ul>
                     </div>
