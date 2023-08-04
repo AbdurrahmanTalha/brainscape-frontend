@@ -18,3 +18,7 @@ p {
 .container {
     @apply px-3 mx-auto;
 }
+
+.course-details-p{
+    color: rgba(255, 255, 255, 0.65);
+}
