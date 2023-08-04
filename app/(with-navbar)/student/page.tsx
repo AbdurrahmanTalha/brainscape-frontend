@@ -11,7 +11,7 @@ const StudentDashboardPage = () => {
     } as React.CSSProperties;
     return (
         <main>
-            <section className="my-20 container">
+            <section className="container my-20">
                 <div className="grid md:w-full gap-5 md:h-[176px] md:grid-cols-2">
                     <div className="flex md:w-[558px] md:h-[160px] items-center gap-8  ">
                         <Image
@@ -33,7 +33,7 @@ const StudentDashboardPage = () => {
                         <div className="grid items-center grid-cols-7 ml-[30px] ">
                             <div>
                                 <FontAwesomeIcon
-                                    className="border border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3"
+                                    className="border  border-[#171320] text-[#FFFFFF] rounded-full p-1 mt-3"
                                     icon={faCheck}
                                 />
                             </div>
