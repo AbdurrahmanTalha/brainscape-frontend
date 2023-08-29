@@ -1,7 +1,23 @@
-import React from "react";
 import PrimaryBtn from "../../../components/ui/PrimaryBtn";
 
-const page = () => {
+async function getData(id: string) {
+    const res = await fetch(`http://localhost:5000/api/v1/course/${id}`);
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
+
+    if (!res.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
+
+const page = async ({ params }: { params: { id: string } }) => {
+    const data = await getData(params.id);
+    const { category, description, image } = data.data;
+    console.log(category);
+
     // Add some CSS styles to the page to ensure the SVG fills the entire viewport
     const pageStyle = {
         margin: 0,
@@ -18,18 +34,15 @@ const page = () => {
     return (
         <>
             <div style={pageStyle}>
-                <svg xmlns="http://www.w3.org/2000/svg" style={svgStyle} viewBox="0 0 1440 300" fill="none">
+                <svg xmlns={image} style={svgStyle} viewBox="0 0 1440 300" fill="none">
                     <path d="M0 0H1440V300H0V0Z" fill="#E5E5E5" />
                     <path d="M0.5 0.5H1439.5V299.5H0.5V0.5Z" stroke="black" strokeOpacity="0.3" />
                 </svg>
             </div>
             <div className="lg:flex justify-between lg:text-left text-center px-[30px] py-[50px]">
                 <div>
-                    <h1 className="font-bold text-[24px] text-white">Course Details</h1>
-                    <p className="font-normal text-base course-details-p py-[20px] lg:w-1/2">
-                        asdasdas das dasd asdas asdasdas d asdasdasd sdasd asdd asdasdasdasdasd asdad asdasdas asdasdsd
-                        asdad asdasdasd asdadasdas dasdas dasd asdasdasd asdasdasdad
-                    </p>
+                    <h1 className="font-bold text-[24px] text-white">{category}</h1>
+                    <p className="font-normal text-base course-details-p py-[20px] lg:w-1/2">{description}</p>
                     <PrimaryBtn
                         padding="11px 10px 47px"
                         fontWeight="bold"
@@ -40,7 +53,7 @@ const page = () => {
                 </div>
                 <div className="lg:mr-[154px] mt-[20px]">
                     <div>
-                        <div className="flex  items-center gap-5">
+                        <div className="flex items-center gap-5">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="28"
