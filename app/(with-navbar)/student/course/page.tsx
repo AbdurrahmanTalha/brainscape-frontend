@@ -2,7 +2,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import img from "@/public/logic-HzWHci.png";
-import Image from "next/image";
+import CourseCard from "@/app/components/Dashboard/CourseCard";
 
 export default function AllCourses() {
     return (
@@ -33,14 +33,13 @@ export default function AllCourses() {
             </div>
             <div>
                 <h2 className="text-[24px] font-semibold text-white mt-[30px]">Category</h2>
-                <div className="">
-                    <div className="w-[375px] h-[340px] bg-[#050505] border-2 border-[#9D77EE] mt-[20px] rounded-[10px] px-[30px]">
-                        <Image src={img} alt="" width={120} height={120} className="mx-auto mt-[25px]" />
-                        <h2 className="font-bold text-[24px] text-white mt-[30px]">Logic</h2>
-                        <p className="w-[320px] text-[#FFFFFF65]">
-                            lorem as asd asda sdasdas dasd asdsa asdasd asdasdsadadad sadasdasdasdasdasd asdsdsdsdsdsds
-                        </p>
-                    </div>
+                <div>
+                    <CourseCard
+                        img={img}
+                        title={"Logic"}
+                        description={"asdas adsdasdasdas dasd sdsds dsds"}
+                        _id={"as"}
+                    />
                 </div>
             </div>
         </div>
