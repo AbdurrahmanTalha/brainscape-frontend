@@ -10,7 +10,7 @@ interface RootState {
 }
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: "https://brainscape-backend.vercel.app/api/v1",
+    baseUrl: "http://localhost:5000/api/v1",
     credentials: "include",
     prepareHeaders: (headers, { getState }) => {
         const token = (getState() as RootState).auth.token;

@@ -38,9 +38,20 @@ const RegisterPage = () => {
         };
         const user = await registerUser(data);
         const res = await login({ email: data.email, password: data.password });
-        if ("data" in user) {
-            console.log(res);
-            dispatch(setCredentials({ user: user.data.data, accessToken: res.data.data.accessToken }));
+        if ("data" in user && "data" in res) {
+            if (
+                user.data.data != undefined &&
+                user.data.data != null &&
+                res.data.data != null &&
+                res.data.data != undefined
+            ) {
+                dispatch(
+                    setCredentials({
+                        user: user.data.data,
+                        accessToken: res.data.data.accessToken,
+                    })
+                );
+            }
         }
     };
 
