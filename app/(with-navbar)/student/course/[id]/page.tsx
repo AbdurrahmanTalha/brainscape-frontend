@@ -1,15 +1,26 @@
-import React from "react";
-import PrimaryBtn from "../../../../components/ui/PrimaryBtn";
+"use client";
+import PrimaryBtn from "@/app/components/ui/PrimaryBtn";
 
-const page = () => {
-    // Add some CSS styles to the page to ensure the SVG fills the entire viewport
+async function getData(id: string) {
+    const res = await fetch(`http://localhost:5000/api/v1/course/${id}`);
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+}
+
+const page = async ({ params }: { params: { id: string } }) => {
+    const data = await getData(params.id);
+    const { category, description, image, sections } = data.data;
+
     const pageStyle = {
         margin: 0,
         padding: 0,
-        overflow: "hidden", // Hide any potential scrollbars
+        overflow: "hidden",
     };
 
-    // Add styles to the SVG to make it responsive and fill the screen
     const svgStyle = {
         width: "100%",
         height: "100%",
@@ -18,74 +29,42 @@ const page = () => {
     return (
         <>
             <div style={pageStyle}>
-                <svg xmlns="http://www.w3.org/2000/svg" style={svgStyle} viewBox="0 0 1440 300" fill="none">
+                <svg xmlns={image} style={svgStyle} viewBox="0 0 1440 300" fill="none">
                     <path d="M0 0H1440V300H0V0Z" fill="#E5E5E5" />
                     <path d="M0.5 0.5H1439.5V299.5H0.5V0.5Z" stroke="black" strokeOpacity="0.3" />
                 </svg>
             </div>
             <div className="lg:flex justify-between lg:text-left text-center px-[30px] py-[50px]">
                 <div>
-                    <h1 className="font-bold text-[24px] text-white">Course Details</h1>
-                    <p className="font-normal text-base course-details-p py-[20px] lg:w-1/2">
-                        asdasdas das dasd asdas asdasdas d asdasdasd sdasd asdd asdasdasdasdasd asdad asdasdas asdasdsd
-                        asdad asdasdasd asdadasdas dasdas dasd asdasdasd asdasdasdad
-                    </p>
-                    <PrimaryBtn padding="15px" fontWeight="bold" name="Join Course" width="180px" height="auto" />
+                    <h1 className="font-bold text-[24px] text-white">{category}</h1>
+                    <p className="font-normal text-base course-details-p py-[20px] lg:w-1/2">{description}</p>
+                    <div
+                        onClick={() => {
+                            console.log("test");
+                        }}
+                    >
+                        <PrimaryBtn padding="15px" fontWeight="bold" name="Join Course" width="180px" height="auto" />
+                    </div>
                 </div>
-                <div className="lg:mr-[100px] mt-[20px]">
-                    <div className="w-[auto] min-w-[260px]">
-                        <div className="flex items-center gap-5">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="33"
-                                viewBox="0 0 28 33"
-                                fill="none"
-                                className="-ml-[50px]"
-                            >
-                                <path
-                                    d="M5.32292 0.818361C4.24375 0.160744 2.8875 0.139064 1.78646 0.753322C0.685417 1.36758 0 2.52383 0 3.78125V29.2188C0 30.4762 0.685417 31.6324 1.78646 32.2467C2.8875 32.8609 4.24375 32.832 5.32292 32.1816L26.3229 19.4629C27.3656 18.8342 28 17.7141 28 16.5C28 15.2859 27.3656 14.173 26.3229 13.5371L5.32292 0.818361Z"
-                                    fill="#9D77EE"
-                                />
-                            </svg>
-                            <h1 className="text-white font-bold text-[20px]">Introduction To Math</h1>
-                        </div>
-                        <ul className="list-disc ">
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                        </ul>
-                    </div>
-                    <div className="mt-[20px]">
-                        <div>
-                            <h1 className="text-white font-bold text-[20px]">Introduction To Math</h1>
-                        </div>
-                        <ul className="list-disc ">
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                        </ul>
-                    </div>
-                    <div className=" mt-[20px]">
-                        <div>
-                            <h1 className="text-white font-bold text-[20px]">Introduction To Math</h1>
-                        </div>
-                        <ul className="list-disc ">
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                        </ul>
-                    </div>
-                    <div className=" mt-[20px]">
-                        <div>
-                            <h1 className="text-white font-bold text-[20px]">Introduction To Math</h1>
-                        </div>
-                        <ul className="list-disc ">
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                            <li className="py-[10px] ml-14">What is math</li>
-                        </ul>
-                    </div>
+                <div className="mt-[20px]">
+                    {sections.map(section => {
+                        return (
+                            <div className="w-[auto] min-w-[210px]" key={section._id}>
+                                <div className="flex items-center gap-5">
+                                    <h1 className="text-white font-bold text-[20px]">{section.section}</h1>
+                                </div>
+                                <ul className="list-disc">
+                                    {section.quiz.map(quiz => {
+                                        return (
+                                            <li className="py-[10px] ml-14" key={quiz._id}>
+                                                {quiz.title}
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </>
