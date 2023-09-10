@@ -38,9 +38,10 @@ const RegisterPage = () => {
         };
         const user = await registerUser(data);
         const res = await login({ email: data.email, password: data.password });
-        dispatch(setCredentials({ user: user.data.data, accessToken: res.data.data.accessToken }));
-        console.log(user);
-        console.log(res);
+        if ("data" in user) {
+            console.log(res);
+            dispatch(setCredentials({ user: user.data.data, accessToken: res.data.data.accessToken }));
+        }
     };
 
     return (
