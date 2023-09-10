@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import img from "/public/men.jpg";
@@ -5,76 +6,89 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 // Test
 const page = () => {
+    const onSubmit = (e: { preventDefault: () => void }) => {
+        e.preventDefault();
+        console.log("submit");
+    };
+
     return (
         <section className="flex lg:flex-row flex-col h-[608px] lg:w-[1218px] w-4/5 mx-auto mt-16 lg:gap-0 gap-5 container">
             <div className="lg:w-1/2">
                 <Image src={img} width={800} height={1600} alt="talha" />
             </div>
             <div className="lg:w-1/2 flex lg:flex-row flex-col justify-center items-center  bg-[#171320]">
-                <div className="w-4/5 mx-auto py-10">
-                    <h3 className="text-4xl font-bold text-center mb-12 text-white">Register</h3>
-                    <div className="flex lg:flex-row flex-col justify-between gap-7">
+                <form onSubmit={onSubmit} className="w-4/5 py-10 mx-auto">
+                    <h3 className="mb-12 text-4xl font-bold text-center text-white">Register</h3>
+                    <div className="flex flex-col justify-between lg:flex-row gap-7">
                         <div className="w-full">
-                            <div className=" w-full mb-7">
-                                <p className="font-medium mb-1 text-white ">First Name</p>
+                            <div className="w-full mb-7">
+                                <p className="mb-1 font-medium text-white ">First Name</p>
                                 <input
                                     type="text"
+                                    name="firstName"
                                     placeholder="First Name"
                                     className="input rounded-md border-2 border-[#9D77EE]  w-full text-xs font-medium "
                                 />
                             </div>
-                            <div className=" w-full mb-7">
-                                <p className="font-medium mb-1 text-white ">Last Name</p>
+                            <div className="w-full mb-7">
+                                <p className="mb-1 font-medium text-white ">Last Name</p>
                                 <input
                                     type="text"
+                                    name="lastName"
                                     placeholder="Last Name"
                                     className="input rounded-md border-2 border-[#9D77EE]   w-full text-xs font-medium "
                                 />
                             </div>
-                            <div className=" w-full mb-7">
-                                <p className="font-medium mb-1 text-white ">Email</p>
+                            <div className="w-full mb-7">
+                                <p className="mb-1 font-medium text-white ">Email</p>
                                 <input
                                     type="text"
+                                    name="email"
                                     placeholder="Email"
                                     className="input rounded-md border-2 border-[#9D77EE]   w-full text-xs font-medium"
                                 />
                             </div>
                         </div>
                         <div className="w-full">
-                            <div className=" w-full ">
-                                <p className="font-medium mb-1 text-white">Middle Name</p>
+                            <div className="w-full ">
+                                <p className="mb-1 font-medium text-white">Middle Name</p>
                                 <input
                                     type="text"
+                                    name="middleName"
                                     placeholder="Middle Name"
                                     className="input rounded-md border-2 border-[#9D77EE]  w-full text-xs font-medium"
                                 />
                             </div>
-                            <div className=" w-4/5 mt-7">
-                                <p className="font-medium mb-1 text-white text-sm">Upload Profile picture</p>
+                            <div className="w-4/5 mt-7">
+                                <p className="mb-1 text-sm font-medium text-white">Upload Profile picture</p>
                                 <label className="custom-file-input-label">
-                                    <input type="file" className=" hidden" />
+                                    <input type="file" name="profileImg" className="hidden " />
                                     <div className="flex justify-start gap-2 items-center  w-full px-4 py-2 cursor-pointer input rounded-md border-2 border-[#9D77EE] text-xs font-medium">
-                                        <FontAwesomeIcon className="text-white w-5 h-5" icon={faUpload} />
+                                        <FontAwesomeIcon className="w-5 h-5 text-white" icon={faUpload} />
                                         Upload Profile
                                     </div>
                                 </label>
                             </div>
-                            <div className=" w-full mt-7">
-                                <p className="font-medium mb-1 text-white">Password</p>
+                            <div className="w-full mt-7">
+                                <p className="mb-1 font-medium text-white">Password</p>
                                 <input
                                     type="password"
+                                    name="password"
                                     placeholder="Password"
                                     className="input rounded-md border-2 border-[#9D77EE] w-full text-xs font-medium"
                                 />
-                                <p className="mt-2 text-sm text-end cursor-pointer">Already Have an account?</p>
+                                <p className="mt-2 text-sm cursor-pointer text-end">Already Have an account?</p>
                             </div>
                         </div>
                     </div>
 
-                    <button className="w-full bg-[#9D77EE] rounded-md text-white h-11 mt-3 font-bold	text-xl">
+                    <button
+                        type="submit"
+                        className="w-full bg-[#9D77EE] rounded-md text-white h-11 mt-3 font-bold	text-xl"
+                    >
                         Register
                     </button>
-                </div>
+                </form>
             </div>
         </section>
     );
