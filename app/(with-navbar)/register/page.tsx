@@ -5,17 +5,42 @@ import img from "/public/men.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { setCredentials } from "@/app/redux/feature/authSlice";
+import { useLoginMutation, useRegisterMutation } from "@/app/redux/feature/auth/authApiSlice";
 import { useAppDispatch } from "@/app/redux/hook";
-// Test
+import { setCredentials } from "@/app/redux/feature/auth/authSlice";
+
+type Inputs = {
+    name?: {
+        firstName: string;
+        middleName: string;
+        lastName: string;
+    };
+    firstName: string;
+    middleName: string;
+    lastName: string;
+    email: string;
+    profilePicture: string;
+    password: string;
+};
+
 const RegisterPage = () => {
+    // const dispatch = useAppDispatch();
     const dispatch = useAppDispatch();
-
     const { register, handleSubmit } = useForm<Inputs>();
-
-    const onSubmit: SubmitHandler<Inputs> = data => {
-        dispatch(setCredentials(data));
-        console.log(data);
+    const [registerUser] = useRegisterMutation();
+    const [login] = useLoginMutation();
+    const onSubmit: SubmitHandler<Inputs> = async data => {
+        data.profilePicture = "aaa";
+        data.name = {
+            firstName: data.firstName,
+            middleName: data.middleName,
+            lastName: data.lastName,
+        };
+        const user = await registerUser(data);
+        const res = await login({ email: data.email, password: data.password });
+        dispatch(setCredentials({ user: user.data.data, accessToken: res.data.data.accessToken }));
+        console.log(user);
+        console.log(res);
     };
 
     return (
@@ -74,7 +99,7 @@ const RegisterPage = () => {
                                 <p className="mb-1 text-sm font-medium text-white">Upload Profile picture</p>
                                 <label className="custom-file-input-label">
                                     <input
-                                        {...register("profileImg")}
+                                        {...register("profilePicture")}
                                         type="file"
                                         name="profileImg"
                                         className="hidden "
