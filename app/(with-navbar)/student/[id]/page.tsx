@@ -1,12 +1,10 @@
 import PrimaryBtn from "../../../components/ui/PrimaryBtn";
 
 async function getData(id: string) {
-    const res = await fetch(`http://localhost:5000/api/v1/course/${id}`);
-    // The return value is *not* serialized
-    // You can return Date, Map, Set, etc.
+    const res = await fetch(`https://brainscape-backend.vercel.app/api/v1/course/${id}`);
+    console.log(res);
 
     if (!res.ok) {
-        // This will activate the closest `error.js` Error Boundary
         throw new Error("Failed to fetch data");
     }
 
@@ -15,8 +13,9 @@ async function getData(id: string) {
 
 const page = async ({ params }: { params: { id: string } }) => {
     const data = await getData(params.id);
-    const { category, description, image } = data.data;
-    console.log(category);
+
+    const { title, description, image } = data.data;
+    console.log(title);
 
     // Add some CSS styles to the page to ensure the SVG fills the entire viewport
     const pageStyle = {
@@ -41,7 +40,7 @@ const page = async ({ params }: { params: { id: string } }) => {
             </div>
             <div className="lg:flex justify-between lg:text-left text-center px-[30px] py-[50px]">
                 <div>
-                    <h1 className="font-bold text-[24px] text-white">{category}</h1>
+                    <h1 className="font-bold text-[24px] text-white">{title}</h1>
                     <p className="font-normal text-base course-details-p py-[20px] lg:w-1/2">{description}</p>
                     <PrimaryBtn
                         padding="11px 10px 47px"
