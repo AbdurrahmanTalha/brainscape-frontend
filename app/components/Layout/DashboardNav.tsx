@@ -39,7 +39,7 @@ const DashboardNav = () => {
                         <Link href="/">Home</Link>
                     </li>
                     <li className="">
-                        <Link href="/student/all-courses">Courses</Link>
+                        <Link href="/student/course/">Courses</Link>
                     </li>
                 </ul>
                 <Link href="/my-profile">
