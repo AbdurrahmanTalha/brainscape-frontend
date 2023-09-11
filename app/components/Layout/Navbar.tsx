@@ -11,13 +11,14 @@ const Navbar = () => {
     useEffect(() => {
         const storedToken = window.localStorage.getItem("token");
         setToken(storedToken);
+        console.log(storedToken);
     }, []);
     return (
         <>
             {token ? (
                 <DashboardNav />
             ) : (
-                <div className="navbar container">
+                <div className="container navbar">
                     <div className="navbar-start">
                         <Link href="/" className="normal-case text-[24px] text-white font-bold">
                             Brainscape
@@ -25,10 +26,10 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end">
                         <div className="dropdown dropdown-end dropdown-bottom">
-                            <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
+                            <label tabIndex={0} className="text-white btn btn-ghost lg:hidden">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="w-5 h-5"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -45,7 +46,7 @@ const Navbar = () => {
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
                             >
-                                <div className="lg:flex items-center gap-7">
+                                <div className="items-center lg:flex gap-7">
                                     <Link href="/register">
                                         <PrimaryBtn
                                             padding="13px 24px"
@@ -67,7 +68,7 @@ const Navbar = () => {
                                 </div>
                             </ul>
                         </div>
-                        <ul className="menu menu-horizontal px-1 hidden lg:flex">
+                        <ul className="hidden px-1 menu menu-horizontal lg:flex">
                             <div className="flex items-center gap-7">
                                 <Link href="/register">
                                     <PrimaryBtn
