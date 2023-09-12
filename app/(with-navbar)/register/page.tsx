@@ -7,6 +7,7 @@ import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { setCredentials } from "@/app/redux/feature/authSlice";
 import { useAppDispatch } from "@/app/redux/hook";
+
 // Test
 const RegisterPage = () => {
     const dispatch = useAppDispatch();
