@@ -1,4 +1,4 @@
-export interface IQuizzes  {
+export interface IQuizzes {
     _id: string;
     title: string;
     quiz: Array<{
@@ -7,7 +7,7 @@ export interface IQuizzes  {
     }>;
 }
 
-export interface ICourse  {
+export interface ICourse {
     _id: string;
     category: string;
     quizzes: IQuizzes[];
