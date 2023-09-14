@@ -18,4 +18,5 @@ export type IUser = {
 
 export type IRefreshTokenResponse = {
     accessToken: string;
+    user: Partial<IUser>
 };
