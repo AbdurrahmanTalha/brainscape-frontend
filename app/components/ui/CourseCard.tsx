@@ -1,4 +1,4 @@
-import { ICourse } from "@/app/interface/Course";
+import { ICourse } from "@/app/interfaces/course";
 import Image from "next/image";
 import React from "react";
 
