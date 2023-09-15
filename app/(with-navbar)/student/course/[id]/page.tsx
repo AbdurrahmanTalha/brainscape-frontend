@@ -1,5 +1,7 @@
 "use client";
 import PrimaryBtn from "@/app/components/ui/PrimaryBtn";
+import { ISection } from "@/app/interfaces/course";
+import { IQuiz } from "@/app/interfaces/quiz";
 import { useJoinCourseMutation } from "@/app/redux/feature/course/courseApiSlice";
 
 async function getData(id: string) {
@@ -45,14 +47,14 @@ const page = async ({ params }: { params: { id: string } }) => {
                     </div>
                 </div>
                 <div className="mt-[20px]">
-                    {sections.map(section => {
+                    {sections.map((section: ISection) => {
                         return (
                             <div className="w-[auto] min-w-[210px]" key={section._id}>
                                 <div className="flex items-center gap-5">
                                     <h1 className="text-white font-bold text-[20px]">{section.section}</h1>
                                 </div>
                                 <ul className="list-disc">
-                                    {section.quiz.map(quiz => {
+                                    {section.quiz.map((quiz: IQuiz) => {
                                         return (
                                             <li className="py-[10px] ml-14" key={quiz._id}>
                                                 {quiz.title}

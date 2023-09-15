@@ -2,7 +2,7 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { ICourse } from "../../../interface/Course";
+import { ICourse } from "../../../interfaces/course";
 import CourseCard from "@/app/components/ui/CourseCard";
 import { useCoursesQuery } from "@/app/redux/feature/course/courseApiSlice";
 
