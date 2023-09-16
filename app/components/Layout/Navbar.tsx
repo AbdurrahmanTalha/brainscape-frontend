@@ -1,21 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import SecondaryBtn from "../ui/SecondaryBtn";
 import DashboardNav from "./DashboardNav";
 import Link from "next/link";
+import { useAppSelector } from "@/app/redux/hook";
 
 const Navbar = () => {
-    const [token, setToken] = useState<string | null>(null);
+    const user = useAppSelector(state => state.auth.value);
+    console.log(user);
 
-    useEffect(() => {
-        const storedToken = window.localStorage.getItem("token");
-        setToken(storedToken);
-        console.log(storedToken);
-    }, []);
     return (
         <>
-            {token ? (
+            {user.token ? (
                 <DashboardNav />
             ) : (
                 <div className="container navbar">
