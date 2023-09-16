@@ -1,6 +1,7 @@
 import React from "react";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import SecondaryBtn from "../ui/SecondaryBtn";
+import Link from "next/link";
 
 const Banner = () => {
     return (
@@ -26,8 +27,24 @@ const Banner = () => {
                         exercitationem aut officia voluptas
                     </p>
                     <div className="flex items-center gap-7">
-                        <PrimaryBtn padding="13px 24px" fontWeight="bold" name="Register" width="120px" height="50px" />
-                        <SecondaryBtn padding="13px 35px" fontWeight="bold" name="Login" width="120px" height="50px" />
+                        <Link href="/register">
+                            <PrimaryBtn
+                                padding="13px 24px"
+                                fontWeight="bold"
+                                name="Register"
+                                width="120px"
+                                height="50px"
+                            />
+                        </Link>
+                        <Link href="/login">
+                            <SecondaryBtn
+                                padding="13px 35px"
+                                fontWeight="bold"
+                                name="Login"
+                                width="120px"
+                                height="50px"
+                            />
+                        </Link>
                     </div>
                 </div>
             </div>
