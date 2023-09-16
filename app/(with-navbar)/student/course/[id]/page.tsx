@@ -2,22 +2,21 @@
 import PrimaryBtn from "@/app/components/ui/PrimaryBtn";
 import { ISection } from "@/app/interfaces/course";
 import { IQuiz } from "@/app/interfaces/quiz";
-import { useJoinCourseMutation } from "@/app/redux/feature/course/courseApiSlice";
+import { useGetSpecificCourseQuery, useJoinCourseMutation } from "@/app/redux/feature/course/courseApiSlice";
+import { useAppSelector } from "@/app/redux/hook";
+// import { useJoinCourseMutation } from "@/app/redux/feature/course/courseApiSlice";
+import Link from "next/link";
 
-async function getData(id: string) {
-    const res = await fetch(`http://localhost:5000/api/v1/course/${id}`);
-
-    if (!res.ok) {
-        throw new Error("Failed to fetch data");
-    }
-
-    return res.json();
-}
-
-const page = async ({ params }: { params: { id: string } }) => {
-    const data = await getData(params.id);
-    const { category, description, image, sections } = data.data;
+const page = ({ params }: { params: { id: string } }) => {
     const [joinCourse] = useJoinCourseMutation();
+    const { data, isLoading } = useGetSpecificCourseQuery({ id: params.id });
+    const user = useAppSelector(state => state.auth.value);
+    console.log(data, isLoading, user);
+
+    if (isLoading) {
+        return <h1>Loading...</h1>;
+    }
+    const { category, description, image, sections } = data.data;
 
     const pageStyle = {
         margin: 0,
@@ -42,7 +41,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                 <div>
                     <h1 className="font-bold text-[24px] text-white">{category}</h1>
                     <p className="font-normal text-base course-details-p py-[20px] lg:w-1/2">{description}</p>
-                    <div onClick={() => joinCourse({ userId: "", courseId: "" })}>
+                    <div onClick={() => joinCourse({ userId: user._id, courseId: params.id })}>
                         <PrimaryBtn padding="15px" fontWeight="bold" name="Join Course" width="180px" height="auto" />
                     </div>
                 </div>
@@ -57,7 +56,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                                     {section.quiz.map((quiz: IQuiz) => {
                                         return (
                                             <li className="py-[10px] ml-14" key={quiz._id}>
-                                                {quiz.title}
+                                                <Link href={`/quiz/${quiz._id}/start`}>{quiz.title}</Link>
                                             </li>
                                         );
                                     })}

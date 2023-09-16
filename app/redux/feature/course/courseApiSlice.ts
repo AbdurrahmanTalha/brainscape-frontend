@@ -10,12 +10,18 @@ export const courseApiSlice = apiSlice.injectEndpoints({
             }),
         }),
         joinCourse: builder.mutation({
-            query: ({ userId, courseId }) => ({
+            query: ({ userId, courseId }: { userId: string; courseId: string }) => ({
                 url: `/course/join-course/${userId}/${courseId}`,
                 method: "POST",
+            }),
+        }),
+        getSpecificCourse: builder.query({
+            query: ({ id }: { id: string }) => ({
+                url: `/course/${id}`,
+                method: "GET",
             }),
         }),
     }),
 });
 
-export const { useCoursesQuery, useJoinCourseMutation } = courseApiSlice;
+export const { useCoursesQuery, useJoinCourseMutation, useGetSpecificCourseQuery } = courseApiSlice;

@@ -28,7 +28,8 @@
         "autoprefixer": "10.4.14",
         "eslint": "^8.45.0",
         "eslint-config-next": "13.4.12",
-        "next": "13.4.12",
+        "next": "^13.4.19",
+        "next-redux-wrapper": "^8.1.0",
         "postcss": "8.4.27",
         "react": "18.2.0",
         "react-dom": "18.2.0",
@@ -42,11 +43,11 @@
         "@typescript-eslint/eslint-plugin": "^6.1.0",
         "@typescript-eslint/parser": "^6.1.0",
         "daisyui": "^3.4.0",
-        "eslint-config-prettier": "^8.8.0",
+        "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.0",
         "eslint-plugin-react": "^7.33.0",
         "husky": "^8.0.3",
-        "lint-staged": "^13.2.3",
+        "lint-staged": "^14.0.1",
         "prettier": "^3.0.0"
     },
     "lint-staged": {

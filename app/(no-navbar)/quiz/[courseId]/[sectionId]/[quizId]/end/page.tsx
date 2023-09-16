@@ -1,6 +1,6 @@
 import Image from "next/image";
 import img from "@/public/Rectangle.png";
-import PrimaryBtn from "../../../components/ui/PrimaryBtn";
+import PrimaryBtn from "../../../../../../components/ui/PrimaryBtn";
 
 const QuizStartPage = () => {
     return (
