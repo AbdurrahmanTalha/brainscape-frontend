@@ -5,12 +5,11 @@ import { apiSlice } from "../../api/apiSlice";
 export const courseApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
         courses: builder.query({
-            query: (data:{searchText:string,searchedCategory:string}) => ({
+            query: (data: { searchText: string; searchedCategory: string }) => ({
                 url: `course?searchTerm=${data.searchText}&category=${data.searchedCategory}`,
-                }),
+            }),
         }),
-        
     }),
 });
 
-export const { useCoursesQuery  } = courseApiSlice;
+export const { useCoursesQuery } = courseApiSlice;
